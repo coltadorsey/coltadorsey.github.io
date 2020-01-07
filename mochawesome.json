@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-07T21:35:20.645Z",
+    "end": "2020-01-07T21:35:33.562Z",
+    "duration": 12917,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e6fdf1a-75db-4552-93c9-ff4657ebd82b",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0bdb62ff-f480-425d-b5c0-70c93efcb64f",
+          "title": "Line Distance",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should not allow user create line distances without 2 points",
+              "fullTitle": "Line Distance should not allow user create line distances without 2 points",
+              "timedOut": null,
+              "duration": 8920,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.submit-button').click({\n  force: true\n});\ncy.contains('Line must have at least 2 points').should('exist');",
+              "err": {},
+              "uuid": "23ccbca1-5e4d-4485-a3d2-d3250412122d",
+              "parentUUID": "0bdb62ff-f480-425d-b5c0-70c93efcb64f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should allow user create line distance with 2 points",
+              "fullTitle": "Line Distance should allow user create line distance with 2 points",
+              "timedOut": null,
+              "duration": 3963,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.plotLineDistancePoints(data[0].plotPoints).then(function () {\n  cy.get('.submit-button').click({\n    force: true\n  });\n});",
+              "err": {},
+              "uuid": "c4376fa0-3962-4322-b1c2-d83d95894b81",
+              "parentUUID": "0bdb62ff-f480-425d-b5c0-70c93efcb64f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "23ccbca1-5e4d-4485-a3d2-d3250412122d",
+            "c4376fa0-3962-4322-b1c2-d83d95894b81"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12883,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-07T21:35:55.791Z",
+    "end": "2020-01-07T21:36:00.587Z",
+    "duration": 4796,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9cc89d7b-ce7d-4940-95cc-47a7ecc05a33",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ff00a37-1e4c-47cc-b0b8-5446ba5364ba",
+          "title": "Logout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow new elite user to log out",
+              "fullTitle": "Logout should allow new elite user to log out",
+              "timedOut": null,
+              "duration": 4779,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should('include', '/map.html');\ncy.get('#account').click();\nif (cy.get('#profile-segment input').should('have.attr', 'checked')) {\n  cy.get('#account-segment').click();\n}\ncy.get('#account-popover').should('have.descendants', 'h4').contains('Profile & Account');\ncy.contains('Logout').click();",
+              "err": {},
+              "uuid": "b4b60873-6ffa-4f47-b5bc-b0a97bd8263d",
+              "parentUUID": "5ff00a37-1e4c-47cc-b0b8-5446ba5364ba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b4b60873-6ffa-4f47-b5bc-b0a97bd8263d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4779,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

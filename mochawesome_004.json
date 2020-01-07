@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-07T21:36:36.468Z",
+    "end": "2020-01-07T21:36:43.810Z",
+    "duration": 7342,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6f96ae25-f235-4f07-8b20-b1f304eeb852",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e32595e7-a578-492f-ad7b-c44315aa0b41",
+          "title": "New elite no preferences",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should prompt for state selection and to start mapping",
+              "fullTitle": "New elite no preferences should prompt for state selection and to start mapping",
+              "timedOut": null,
+              "duration": 4360,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#state-selector-dialog').should('exist');\ncy.get('@button').should('be.disabled');\nd.states.forEach(function (state) {\n  cy.get('.datamaps-subunit.' + state.toUpperCase()).click();\n});\ncy.get('@button').should('have.class', 'done-button', 'no-purchase').should('not.be.disabled').click();\ncy.get('#state-selector-dialog').should('not.exist');\ncy.get('#membership-activated-dialog').as('activated');\ncy.get('@activated').should('exist');\ncy.get('.membership-title').contains(d.membershipTitle);\ncy.get('.membership-activated').find('.instructions').contains(data[0].membershipActivated);\ncy.get('button').contains('Start Mapping').click();\ncy.get('@activated').should('not.exist');",
+              "err": {},
+              "uuid": "67b30bad-6f04-480b-bd25-5f6b4c654025",
+              "parentUUID": "e32595e7-a578-492f-ad7b-c44315aa0b41",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should prompt for state selection and to start mapping",
+              "fullTitle": "New elite no preferences should prompt for state selection and to start mapping",
+              "timedOut": null,
+              "duration": 2870,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#state-selector-dialog').should('exist');\ncy.get('@button').should('be.disabled');\nd.states.forEach(function (state) {\n  cy.get('.datamaps-subunit.' + state.toUpperCase()).click();\n});\ncy.get('@button').should('have.class', 'done-button', 'no-purchase').should('not.be.disabled').click();\ncy.get('#state-selector-dialog').should('not.exist');\ncy.get('#membership-activated-dialog').as('activated');\ncy.get('@activated').should('exist');\ncy.get('.membership-title').contains(d.membershipTitle);\ncy.get('.membership-activated').find('.instructions').contains(data[0].membershipActivated);\ncy.get('button').contains('Start Mapping').click();\ncy.get('@activated').should('not.exist');",
+              "err": {},
+              "uuid": "a151e33a-4cb4-4177-b715-5cd41582e979",
+              "parentUUID": "e32595e7-a578-492f-ad7b-c44315aa0b41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67b30bad-6f04-480b-bd25-5f6b4c654025",
+            "a151e33a-4cb4-4177-b715-5cd41582e979"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7230,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
